@@ -26,6 +26,7 @@ version := "0.1"
 libraryDependencies += "com.github.pureconfig" %% "pureconfig" % "0.11.1"
 libraryDependencies += "com.softwaremill.sttp" %% "core" % "1.6.4"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
+libraryDependencies += "io.circe" %% "circe-parser" % "0.11.1"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % "test"
 libraryDependencies += "org.slf4j" % "slf4j-log4j12" % "1.7.25"
 

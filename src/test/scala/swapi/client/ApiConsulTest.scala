@@ -18,7 +18,7 @@ class GetCharactersSpec extends FunSpec {
       .synchronous
       .whenRequestMatches(
         _.uri.path.startsWith(
-          List("api", "people", "1")
+          List("api", "people")
         )
       )
       .thenRespondCyclicResponses(
@@ -34,7 +34,7 @@ class GetCharactersSpec extends FunSpec {
   describe("getCharacters") {
 
     describe("method invocation") {
-      
+
       it("should call apropriate endpoint and return proper response") {
         val response = getCharactersMethod()
         response match {
@@ -42,7 +42,7 @@ class GetCharactersSpec extends FunSpec {
           case None => assert(false)
         }
       }
-      
+
       it("should return None on api error") {
         val response = getCharactersMethod()
         response match {

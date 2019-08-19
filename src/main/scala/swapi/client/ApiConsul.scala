@@ -15,7 +15,7 @@ class getCharacters(config: Config) extends SttpBackend with LazyLogging {
     )
 
     private def requestUri: Uri = {
-        uri"${config.apiUri}people/${config.filmId}/?format=json"
+        uri"${config.apiUri}people/?format=json"
     }
 
     private def getHttpRequest: Request[String,Nothing] = {
