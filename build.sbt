@@ -23,6 +23,9 @@ version := "0.1"
 
 // Want to use a published library in your project?
 // You can define other libraries as dependencies in your build like this:
+libraryDependencies += "org.slf4j" % "slf4j-log4j12" % "1.7.25"
+libraryDependencies += "com.softwaremill.sttp" %% "core" % "1.6.4"
+libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.2"
 libraryDependencies += "org.typelevel" %% "cats-core" % "1.6.0"
 libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.8" % "test"
 
