@@ -19,10 +19,6 @@ object getConfig extends LazyLogging {
                 logger.error(s"Unable to load config file. Error details: $error")
                 None
             }
-            case _ => {
-                logger.error(s"Unexpected error while loading application config file")
-                None
-            }
         }
     }
 }
