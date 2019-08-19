@@ -11,7 +11,15 @@ class HelloWorld extends ConsoleOutput {
 }
 
 object Main extends App with LazyLogging {
-  logger.info("Starting up SWApi client..")
-  new HelloWorld().greet()
-  logger.info("SWApi client shutting down..")
+  logger.info("Starting up SW-Api client..")
+  getConfig() match {
+    case Some(conf: Config) => {
+      logger.info(s"Loaded configuration file: $conf")
+      new HelloWorld().greet()
+    }
+    case None => {
+      logger.info("Configuration file not loaded, application will close")
+    }
+  }
+  logger.info("SW-Api client shutting down..")
 }
